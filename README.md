@@ -1,7 +1,7 @@
-<h1 align="center">Hi 👋, I'm Martin "Chuck3CZ" Gabrhel</h1>
+<h1 align="center">Hi 👋, I'm Martin "Chuck3CZ" Gabrhel</h1> <p align="right"> <img src="https://komarev.com/ghpvc/?username=chuck3cz&label=Profile%20views&color=0e75b6&style=flat" alt="chuck3cz" /> </p>
 <h3 align="center">Tech student from Czech Republic</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=chuck3cz&label=Profile%20views&color=0e75b6&style=flat" alt="chuck3cz" /> </p>
+
 
 <p align="left"> <a href="https://twitter.com/gabrhelmartin" target="blank"><img src="https://img.shields.io/twitter/follow/gabrhelmartin?logo=twitter&style=for-the-badge" alt="gabrhelmartin" /></a> </p>
 
