@@ -5,7 +5,7 @@
 
 <p align="left"> <a href="https://twitter.com/gabrhelmartin" target="blank"><img src="https://img.shields.io/twitter/follow/gabrhelmartin?logo=twitter&style=for-the-badge" alt="gabrhelmartin" /></a> </p>
 
-- 🔭 I’m currently working on **Phoenix CS-CZ** <a href="https://github.com/Chuck3CZ/phoenix-kmm-Phoenix-CS-CZ">
+- 🔭 I’m currently working on **Phoenix CS-CZ** <a href="https://github.com/Chuck3CZ/phoenix-kmm-Phoenix-CS-CZ" />
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
