@@ -1,7 +1,3 @@
-### Hi there 👋
-
-
-
 <h1 align="center">Hi 👋, I'm Martin "Chuck3CZ" Gabrhel</h1>
 <h3 align="center">Tech student from Czech Republic</h3>
 
