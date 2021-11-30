@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I am Martin "Chuck3CZ" Gabrhel</h1>
-<h3 align="center">Tech ~~student~~ guy from Czech Republic 🇨🇿 </h3>
+<h3 align="center">Tech student guy from Czech Republic 🇨🇿 </h3>
 
 
 <p> - 🔭 I’m currently working on <a href="https://github.com/Chuck3CZ/phoenix-kmm-Phoenix-CS-CZ">**Phoenix CS-CZ** </a> </p>
