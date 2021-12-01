@@ -2,7 +2,7 @@
 <h3 align="center">Tech student guy from Czech Republic 🇨🇿 </h3>
 
 
-<p> - 🔭 I’m currently working on <a href="https://github.com/Chuck3CZ/phoenix-kmm-Phoenix-CS-CZ">**Phoenix CS-CZ** </a> </p>
+<p> - 🔭 I’m currently working on <a href="https://github.com/Chuck3CZ/phoenix-kmm-Phoenix-CS-CZ"> **Phoenix CS-CZ** </a>   and <a href="https://github.com/Chuck3CZ/Arduino_Chicken_Door"> **Chicken Door opener** </a> </p>
 
 
 <br>
