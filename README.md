@@ -15,9 +15,9 @@
 <a href="https://discord.gg/Chuck3CZ#8595" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="Chuck3CZ#8595" height="30" width="40" /></a>
 </p> <p> <a href="https://twitter.com/gabrhelmartin" target="blank"><img src="https://img.shields.io/twitter/follow/gabrhelmartin?logo=twitter&style=for-the-badge" alt="gabrhelmartin" /></a> </p>
 
-Solarized dark             |  Solarized Ocean
+//*Solarized dark             |  Solarized Ocean
 :-------------------------:|:-------------------------:
-![](https://...Dark.png)  |  ![](https://...Ocean.png)
+![](https://...Dark.png)  |  ![](https://...Ocean.png)*//
 
 
 <br>
