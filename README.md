@@ -22,4 +22,4 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=chuck3cz&label=Profile%20views&color=0e75b6&style=flat" alt="chuck3cz" /> </p>
 
-<p>Buy me a coffee ☕: LN: martin@lnpay.cz or BTC: bc1qnq2c73sc2eyztljrrw7y263t2ga9zr6g75kwgj </p>
+<p>Buy me a coffee ☕: <b> LN: martin@lnpay.cz </b> or <b> BTC: bc1qnq2c73sc2eyztljrrw7y263t2ga9zr6g75kwgj </b> </p>
