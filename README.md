@@ -2,7 +2,8 @@
 <h3 align="center">Tech student guy from Czech Republic 🇨🇿 </h3>
 
 
-<p> - 🔭 I’m currently working on <a href="https://github.com/Chuck3CZ/phoenix-kmm-Phoenix-CS-CZ"> **Phoenix CS-CZ** </a>   and <a href="https://github.com/Chuck3CZ/Arduino_Chicken_Door"> **Chicken Door opener** </a> </p>
+<p> - 🔭 I’m currently working on <a href="https://github.com/Chuck3CZ/phoenix-kmm-Phoenix-CS-CZ"> ** Phoenix CS-CZ ** </a> and <a href="https://github.com/signalapp/Signal-iOS"> ** Signal messenger - CZ ** </a> <a href="https://github.com/Chuck3CZ/LNBitcoin.cz"> ** LNBitcoin.cz ** </a> </p>
+
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=chuck3cz&label=Profile%20views&color=0e75b6&style=flat" alt="chuck3cz" /> </p>
 
@@ -10,12 +11,14 @@
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<h4 align="left">GPG:</h4> <p>783497196D522299F46250EB42BB2BDBC8DCA47E</p>
+
 <a href="https://fb.com/gabrhel.martin" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="gabrhel.martin" height="30" width="40" /></a>
 <a href="https://instagram.com/gabrhel.martin" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="gabrhel.martin" height="30" width="40" /></a>
 <a href="https://twitter.com/gabrhelmartin" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="gabrhelmartin" height="30" width="40" /></a>
 <a href="https://discord.gg/Chuck3CZ#8595" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="Chuck3CZ#8595" height="30" width="40" /></a>
 </p> <p> <a href="https://twitter.com/gabrhelmartin" target="blank"><img src="https://img.shields.io/twitter/follow/gabrhelmartin?logo=twitter&style=for-the-badge" alt="gabrhelmartin" /></a> </p>
+<h4 align="left">GPG: 783497196D522299F46250EB42BB2BDBC8DCA47E</h4>
+
 
 <br>
 <h3 align="left">Languages and Tools:</h3>
