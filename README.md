@@ -2,8 +2,8 @@
 <h3 align="center">Tech student guy from Czech Republic 🇨🇿 </h3>
 
 
-<p> - 🔭 I’m currently working on <a href="https://github.com/Chuck3CZ/phoenix-kmm-Phoenix-CS-CZ"> ** Phoenix CS-CZ ** </a>, 
-<a href="https://github.com/signalapp/Signal-iOS"> ** Signal messenger - CZ ** </a> and <a href="https://github.com/Chuck3CZ/LNBitcoin.cz"> ** LNBitcoin.cz ** </a> </p>
+<p> - 🔭 I’m currently working on <a href="https://github.com/Chuck3CZ/phoenix-kmm-Phoenix-CS-CZ"> Phoenix CS-CZ </a>, 
+<a href="https://github.com/signalapp/Signal-iOS"> Signal messenger - CZ </a> and <a href="https://github.com/Chuck3CZ/LNBitcoin.cz"> LNBitcoin.cz </a> </p>
 
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=chuck3cz&label=Profile%20views&color=0e75b6&style=flat" alt="chuck3cz" /> </p>
