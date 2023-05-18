@@ -2,8 +2,8 @@
 <h3 align="center">Tech student guy from Czech Republic 🇨🇿 </h3>
 
 
-<p> - 🔭 I’m currently working on <a href="https://github.com/ACINQ/phoenix/tree/master/phoenix-ios/phoenix-ios/cs.lproj"> Phoenix CS-CZ </a>, 
-<a href="https://github.com/Chuck3CZ/ESP8266-Bitcoin-OLED-Ticker">BTC Ticker </a> and <a href="https://github.com/3CZPlay/LNBitcoin.cz"> LNBitcoin.cz </a> now with NOSTR support on address: <a href="https://github.com/Chuck3CZ/21B.cz"> 21B.cz</a> </p>
+<p> - 🔭 I’m currently working on LN wallet <a href="https://github.com/ACINQ/phoenix/tree/master/phoenix-ios/phoenix-ios/cs.lproj"> Phoenix CS-CZ </a>, 
+<a href="https://github.com/Chuck3CZ/ESP8266-Bitcoin-OLED-Ticker">BTC Ticker </a>, <a href="https://github.com/3CZPlay/LNBitcoin.cz"> @LNBitcoin.cz </a> now with NOSTR support on address: <a href="https://github.com/Chuck3CZ/21B.cz"> @21B.cz</a> and translating of DAMUS <a href:"https://github.com/damus-io/damus"</a></p>
 
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=chuck3cz&label=Profile%20views&color=0e75b6&style=flat" alt="chuck3cz" /> </p>
