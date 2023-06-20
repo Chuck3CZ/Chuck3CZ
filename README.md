@@ -37,9 +37,9 @@
 <li>CPU: Intel i5-9400F 6C, 2.9GHz, TBoost:4.10 GHz</li>
 <li>GPU: ASUS ROG Strix RADEON RX 6650xt 8GB Aura RGB</li>
 <li>RAM: 48GB (3x16GB) ADATA XPG SPECTRIX D41 DDR4-2666 CL16 Aura RGB</li>
-<li>Case: DIY Case with Aura RGB</li>
-<li>Cooler: SilentiumPC Fera 3 Aura RGB</li>
 <li>Motherboard: Asus ROG Strix B360-G Gaming Aura Sync</li>
+<li>Cooler: SilentiumPC Fera 3 Aura RGB</li>
+<li>Case: DIY Case with Aura RGB</li>
 <li>Drives:
 <ul dir="auto">
 <li>Boot: Samsung 970 Evo Plus 500GB NVMe</li>
