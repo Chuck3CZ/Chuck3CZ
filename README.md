@@ -26,5 +26,42 @@
 <br>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=chuck3cz&label=Profile%20views&color=0e75b6&style=flat" alt="chuck3cz" /> </p>
 <br>
+
+<h2 dir="auto"><a id="user-content-️-my-beautiful-workstation" class="anchor" aria-hidden="true" href="#️-my-beautiful-workstation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><g-emoji class="g-emoji" alias="desktop_computer" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f5a5.png">🖥️</g-emoji> My beautiful Workstation</h2>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://user-images.githubusercontent.com/55334727/233895069-d1aa1e76-3ce5-4e3d-b1ea-ee7d34bd80c2.png"><img src="https://user-images.githubusercontent.com/55334727/233895069-d1aa1e76-3ce5-4e3d-b1ea-ee7d34bd80c2.png" style="max-width: 100%;" height="300vh" align="right"></a></p>
+<details open="">
+  <summary>Machine Specs</summary>
+<ul dir="auto">
+<li>CPU: Intel i5-9400F</li>
+<li>GPU: ASUS ROG Strix RADEON RX 6650xt 8GB Aura RGB</li>
+<li>RAM: 48GB (3x16GB) ADATA XPG SPECTRIX D41 DDR4-2666 CL16 Aura RGB</li>
+<li>Case: DIY Case with Aura RGB</li>
+<li>Cooler: SilentiumPC Fera 3 Aura RGB</li>
+<li>Motherboard: Asus ROG Strix B360-G Gaming Aura Sync</li>
+<li>Drives:
+<ul dir="auto">
+<li>Boot: Samsung 970 Evo Plus 500GB NVMe</li>
+<li>Work: Seagate BarraCuda 6TB HDD</li>
+<li>Game: Micron 2200 1TB NVMe</li>
+</ul>
+</li>
+</ul>
+</details>
+<details>
+  <summary>Peripherals</summary>
+<li>Monitor: 1x Asus BE24A 1920x1200px (LAND/PORT) 2x 1280x1024 </li>
+<ul dir="auto">
+<li>Keyboard: Asus TUF GAMING K5 Aura RGB</li>
+<li>Mouse: Asus TUF Gaming M3 Aura RGB</li>
+<li>Audio Equip:
+<ul dir="auto">
+<li>Speakers: Logitech 7.1 + AirPlay2 2.1 + HomePod mini</li>
+<li>Microphone: CM25 MkIII condenser microphone</li>
+<li>Headphones: Gamdias Hephaestus P1, AirPods Max </li>
+</ul>
+</li>
+</ul>
+  </details>
+<br>
 <p>Buy me a coffee ☕⤵: </p>
 <p>LN address: <b> <a href="lightning://martin@lnpay.cz">martin@lnpay.cz</a> </b> or BTC: <b> <a href="bitcoin://bc1qnq2c73sc2eyztljrrw7y263t2ga9zr6g75kwgj">bc1qnq2c73sc2eyztljrrw7y263t2ga9zr6g75kwgj</a> </b> </p>
