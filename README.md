@@ -51,15 +51,15 @@
 </details>
 <details>
   <summary>Peripherals</summary>
-<li>Monitor: 1x Asus BE24A 1920x1200px (LAND/PORT) 2x 1280x1024 </li>
+<li>Monitor: 1x Asus BE24A 1920x1200px (LAND/PORT), 1x LG24MB37PY 1920x1080,  1x Prestigio P372 1280x1024 </li>
 <ul dir="auto">
 <li>Keyboard: Asus TUF GAMING K5 Aura RGB</li>
 <li>Mouse: Asus TUF Gaming M3 Aura RGB</li>
 <li>Audio Equip:
 <ul dir="auto">
-<li>Speakers: Logitech 7.1 + AirPlay2 2.1 + HomePod mini</li>
+<li>Speakers: Logitech 7.1 + 2x AirPort Express - AirPlay 2 + HomePod mini</li>
 <li>Microphone: CM25 MkIII condenser microphone</li>
-<li>Headphones: Gamdias Hephaestus P1, AirPods Max </li>
+<li>Headphones: Beyerdynamic MMX150, Gamdias Hephaestus P1, AirPods Max </li>
 </ul>
 </li>
 </ul>
