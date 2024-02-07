@@ -42,7 +42,8 @@
 <li>Case: DIY Case with Aura RGB</li>
 <li>Drives:
 <ul dir="auto">
-<li>Boot: Samsung 970 Evo Plus 500GB NVMe</li>
+<li>Boot: Samsung 990 Pro 2TB NVMe</li>
+<li>Boot MacOS: Samsung 970 Evo Plus 500GB</li>
 <li>Work: Seagate BarraCuda 6TB HDD</li>
 <li>Game: Micron 2200 1TB NVMe</li>
 </ul>
