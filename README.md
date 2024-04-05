@@ -2,7 +2,8 @@
 <h3 align="center">Tech guy from Czech Republic 🇨🇿 </h3>
 
 
-<p> - 🔭 I’m currently working on <p align="center">LN wallet <a href="https://github.com/ACINQ/phoenix/tree/master/phoenix-ios/phoenix-ios/cs.lproj"> Phoenix CS-CZ </a>, 
+<p> - 🔭 I’m currently working on <p align="center">LN wallet <a href="https://github.com/ACINQ/phoenix/tree/master/phoenix-ios/phoenix-ios/cs.lproj"> Phoenix CS-CZ translation</a>, 
+<p align="center">mempool.space <a href="https://mempool.space/cs"> Czech translation</a>, 
 <p align="center"><a href="https://github.com/Chuck3CZ/ESP8266-Bitcoin-OLED-Ticker">BTC Ticker </a></p> <p align="center"><a href="https://github.com/3CZPlay/LNBitcoin.cz"> @LNBitcoin.cz </a> now with NOSTR support on address: <a href="https://github.com/Chuck3CZ/21B.cz"> @21B.cz</a> <p align="center">and translate of <a href="https://github.com/damus-io/damus">Damus</a> </p></p> </p>
 
 <br>
