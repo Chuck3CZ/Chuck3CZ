@@ -61,7 +61,7 @@
 <ul dir="auto">
 <li>Speakers: Logitech 7.1 + 2x AirPort Express - AirPlay 2 + HomePod mini</li>
 <li>Microphone: CM25 MkIII condenser microphone</li>
-<li>Headphones: Beyerdynamic MMX150, Gamdias Hephaestus P1, AirPods Max </li>
+<li>Headphones: Beyerdynamic MMX150, Gamdias Hephaestus P1, AirPods Max/Pro 2.gen </li>
 </ul>
 </li>
 </ul>
