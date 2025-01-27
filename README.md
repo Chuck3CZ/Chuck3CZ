@@ -2,9 +2,18 @@
 <h3 align="center">Tech guy from Czech Republic 🇨🇿 </h3>
 
 
-<p> - 🔭 I’m currently working on <p align="center">LN wallet <a href="https://github.com/ACINQ/phoenix/tree/master/phoenix-ios/phoenix-ios/cs.lproj"> Phoenix CS-CZ translation</a>, 
-<p align="center">Mempool.space <a href="https://mempool.space/cs"> Czech translation</a>, 
-<p align="center"><a href="https://github.com/Chuck3CZ/ESP8266-Bitcoin-OLED-Ticker">BTC Ticker </a></p> <p align="center"><a href="https://github.com/3CZPlay/LNBitcoin.cz"> @LNBitcoin.cz </a> now with NOSTR support on address: <a href="https://github.com/Chuck3CZ/21B.cz"> @21B.cz</a> <p align="center">and translate of <a href="https://github.com/damus-io/damus">Damus</a> </p></p> </p>
+<p> - 🔭 I’m currently working on 
+  <p align="center">------- Code 💻 -------</p>
+<p align="center"><a href="https://github.com/Chuck3CZ/ESP8266-Bitcoin-OLED-Ticker">BTC Ticker </a></p>
+<p align="center"><a href="https://github.com/3CZPlay/LNBitcoin.cz"> @LNBitcoin.cz </a> now with NOSTR support on address: <a href="https://github.com/Chuck3CZ/21B.cz"> @21B.cz</a>
+
+<p>‎ </p>
+
+  <p align="center">------- Translation 🇨🇿 -------</p>
+<p align="center">✅LN wallet <a href="https://github.com/ACINQ/phoenix/tree/master/phoenix-ios/phoenix-ios/cs.lproj"> Phoenix CS-CZ translation</a>, 
+<p align="center">✅Mempool.space <a href="https://mempool.space/cs"> Czech translation</a>, 
+<p align="center">Project Zomboid <a href="https://github.com/Chuck3CZ/ProjectZomboidTranslations"> Czech translation</a>, 
+<p align="center">and translate of <a href="https://github.com/damus-io/damus">Damus</a> </p></p> </p>
 
 <br>
 
@@ -35,7 +44,7 @@
 <details open="">
   <summary>Machine Specs</summary>
 <ul dir="auto">
-<li>CPU: Intel i5-9400F 6C, 2.9GHz, TBoost:4.10 GHz</li>
+<li>CPU: Intel i7-9700 6C, 3.0 GHz, TBoost:4.70 GHz</li>
 <li>GPU: ASUS ROG Strix RADEON RX 6650xt 8GB Aura RGB</li>
 <li>RAM: 48GB (3x16GB) ADATA XPG SPECTRIX D41 DDR4-2666 CL16 Aura RGB</li>
 <li>Motherboard: Asus ROG Strix B360-G Gaming Aura Sync</li>
@@ -45,8 +54,8 @@
 <ul dir="auto">
 <li>Boot: Samsung 990 Pro 2TB NVMe</li>
 <li>Boot MacOS: Samsung 970 Evo Plus 500GB</li>
+<li>Game: Samsung 990 Pro 4TB NVMe</li>
 <li>Work: Seagate BarraCuda 6TB HDD</li>
-<li>Game: Micron 2200 1TB NVMe</li>
 </ul>
 </li>
 </ul>
