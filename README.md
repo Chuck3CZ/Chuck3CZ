@@ -2,18 +2,29 @@
 <h3 align="center">Tech guy from Czech Republic 🇨🇿 </h3>
 
 
-<p> - 🔭 I’m currently working on 
-  <p align="center">------- Code 💻 -------</p>
-<p align="center"><a href="https://github.com/Chuck3CZ/ESP8266-Bitcoin-OLED-Ticker">BTC Ticker </a></p>
-<p align="center"><a href="https://github.com/3CZPlay/LNBitcoin.cz"> @LNBitcoin.cz </a> now with NOSTR support on address: <a href="https://github.com/Chuck3CZ/21B.cz"> @21B.cz</a>
+<table align="center">
+  <tr>
+    <th>Code 💻</th>
+    <th>Translation 🇨🇿</th>
+  </tr>
+  <tr>
+    <td align="center">✅<a href="https://github.com/Chuck3CZ/ESP8266-Bitcoin-OLED-Ticker">BTC Ticker</a></td>
+    <td align="center">✅LN wallet <a href="https://github.com/ACINQ/phoenix/tree/master/phoenix-ios/phoenix-ios/cs.lproj">Phoenix</a></td>
+  </tr>
+  <tr>
+    <td align="center">👨‍💻<a href="https://github.com/3CZPlay/LNBitcoin.cz">@LNBitcoin.cz</a></td>
+    <td align="center">✅<a href="https://mempool.space/cs">Mempool.space</a></td>
+  </tr>
+  <tr>
+    <td align="center">👨‍💻<a href="https://github.com/Chuck3CZ/21B.cz">@21B.cz</a></td>
+   <td align="center">✅<a href="https://github.com/damus-io/damus">Damus</a>  💜</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="center">👨‍💻<a href="https://github.com/Chuck3CZ/ProjectZomboidTranslations">Project Zomboid</a></td>  
+  </tr>
+</table>
 
-<p>‎ </p>
-
-  <p align="center">------- Translation 🇨🇿 -------</p>
-<p align="center">✅LN wallet <a href="https://github.com/ACINQ/phoenix/tree/master/phoenix-ios/phoenix-ios/cs.lproj"> Phoenix CS-CZ translation</a>, 
-<p align="center">✅Mempool.space <a href="https://mempool.space/cs"> Czech translation</a>, 
-<p align="center">Project Zomboid <a href="https://github.com/Chuck3CZ/ProjectZomboidTranslations"> Czech translation</a>, 
-<p align="center">and translate of <a href="https://github.com/damus-io/damus">Damus</a> </p></p> </p>
 
 <br>
 
