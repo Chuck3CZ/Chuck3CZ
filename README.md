@@ -35,7 +35,7 @@
 <a href="https://fb.com/gabrhel.martin" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="gabrhel.martin" height="30" width="40" /></a>
 <a href="https://instagram.com/gabrhel.martin" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="gabrhel.martin" height="30" width="40" /></a>
 <a href="https://twitter.com/gabrhelmartin" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="gabrhelmartin" height="30" width="40" /></a>
-<a href="https://discord.gg/Chuck3CZ#8595" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="Chuck3CZ#8595" height="30" width="40" /></a>
+<a href="https://discord.gg/Chuck3CZ" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="Chuck3CZ" height="30" width="40" /></a>
 </p> <p> <a href="https://twitter.com/gabrhelmartin" target="blank"><img src="https://img.shields.io/twitter/follow/gabrhelmartin?logo=twitter&style=for-the-badge" alt="gabrhelmartin" /></a> </p>
 <h4 align="left">GPG: 783497196D522299F46250EB42BB2BDBC8DCA47E</h4>
 
