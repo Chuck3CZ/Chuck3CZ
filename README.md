@@ -24,6 +24,7 @@
      <td align="center">👨‍💻<a href="https://github.com/3CZPlay/LNBitcoin.cz">@LNBitcoin.cz</a></td>
      <td align="center">👨‍💻<a href="https://github.com/Chuck3CZ/ProjectZomboidTranslations">Project Zomboid</a></td>  
   </tr>
+  <tr> https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/Chuck3CZ </tr>
 </table>
 
 
