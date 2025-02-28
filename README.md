@@ -10,7 +10,7 @@
   <tr>
     <td align="center">🔄<a href="https://github.com/Chuck3CZ/ESP8266-Bitcoin-OLED-Ticker">Mini BTC Ticker</a></td>
     <td align="center">✅LN wallet <a href="https://github.com/ACINQ/phoenix/tree/master/phoenix-ios/phoenix-ios/cs.lproj">Phoenix</a></td>
-    <td align="center"> <a href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/Chuck3CZ" target="blank"> </a> </td>
+  
   </tr>
   
   <tr>
@@ -26,6 +26,10 @@
      <td align="center">👨‍💻<a href="https://github.com/Chuck3CZ/ProjectZomboidTranslations">Project Zomboid</a></td> 
     
   </tr>
+</table>
+
+<table align="center">
+    <td align="center"> <a href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/Chuck3CZ" target="blank"> </a> </td>
 </table>
 
 
