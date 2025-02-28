@@ -20,11 +20,12 @@
     <td align="center">👨‍💻<a href="https://github.com/Chuck3CZ/21B.cz">@21B.cz</a></td>
     <td align="center">✅<a href="https://github.com/damus-io/damus">Damus</a>  💜</td>
   </tr>
-  <tr></tr>
+  <tr>
      <td align="center">👨‍💻<a href="https://github.com/3CZPlay/LNBitcoin.cz">@LNBitcoin.cz</a></td>
      <td align="center">👨‍💻<a href="https://github.com/Chuck3CZ/ProjectZomboidTranslations">Project Zomboid</a></td>  
   </tr>
-  <tr> https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/Chuck3CZ </tr>
+  <tr> <a href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/Chuck3CZ" target="blank"> </a>
+  </tr>
 </table>
 
 
