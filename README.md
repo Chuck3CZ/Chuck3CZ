@@ -20,8 +20,7 @@
     <td align="center">👨‍💻<a href="https://github.com/Chuck3CZ/21B.cz">@21B.cz</a></td>
     <td align="center">✅<a href="https://github.com/damus-io/damus">Damus</a>  💜</td>
   </tr>
-  <tr>
-    <td></td>
+  <tr></tr>
      <td align="center">👨‍💻<a href="https://github.com/3CZPlay/LNBitcoin.cz">@LNBitcoin.cz</a></td>
      <td align="center">👨‍💻<a href="https://github.com/Chuck3CZ/ProjectZomboidTranslations">Project Zomboid</a></td>  
   </tr>
