@@ -8,20 +8,22 @@
     <th>Translation 🇨🇿</th>
   </tr>
   <tr>
-    <td align="center">✅<a href="https://github.com/Chuck3CZ/ESP8266-Bitcoin-OLED-Ticker">BTC Ticker</a></td>
+    <td align="center">✅<a href="https://github.com/Chuck3CZ/ESP8266-Bitcoin-OLED-Ticker">Mini BTC Ticker</a></td>
     <td align="center">✅LN wallet <a href="https://github.com/ACINQ/phoenix/tree/master/phoenix-ios/phoenix-ios/cs.lproj">Phoenix</a></td>
   </tr>
+  
   <tr>
-    <td align="center">👨‍💻<a href="https://github.com/3CZPlay/LNBitcoin.cz">@LNBitcoin.cz</a></td>
+    <td align="center">👨‍💻<a href="https://github.com/Chuck3CZ/Bitcoin_martix_scroller">Matrix BTC Ticker</a></td>
     <td align="center">✅<a href="https://mempool.space/cs">Mempool.space</a></td>
   </tr>
   <tr>
     <td align="center">👨‍💻<a href="https://github.com/Chuck3CZ/21B.cz">@21B.cz</a></td>
-   <td align="center">✅<a href="https://github.com/damus-io/damus">Damus</a>  💜</td>
+    <td align="center">✅<a href="https://github.com/damus-io/damus">Damus</a>  💜</td>
   </tr>
   <tr>
     <td></td>
-    <td align="center">👨‍💻<a href="https://github.com/Chuck3CZ/ProjectZomboidTranslations">Project Zomboid</a></td>  
+     <td align="center">👨‍💻<a href="https://github.com/3CZPlay/LNBitcoin.cz">@LNBitcoin.cz</a></td>
+     <td align="center">👨‍💻<a href="https://github.com/Chuck3CZ/ProjectZomboidTranslations">Project Zomboid</a></td>  
   </tr>
 </table>
 
