@@ -32,7 +32,7 @@
 
   <table align="right"> 
 <td align="center">
-<a href="https://github-profiles-qr-generator.vercel.app" target="blank"><img align="center" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/Chuck3CZ" alt="gabrhel.martin" height="80" width="80" /></a>
+<a href="https://github-profiles-qr-generator.vercel.app" target="blank"><img align="center" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/Chuck3CZ" alt="gabrhel.martin" height="160" width="160" /></a>
 </td>
 
 </table>
