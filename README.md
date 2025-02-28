@@ -29,7 +29,7 @@
 </table>
 
 <table align="center">
-    <td align="center"> <a href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/Chuck3CZ" target="blank"> </a> </td>
+  <a href="https://github-profiles-qr-generator.vercel.app" target="blank"><img align="center" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/Chuck3CZ" alt="gabrhel.martin" height="60" width="60" /></a>
 </table>
 
 
