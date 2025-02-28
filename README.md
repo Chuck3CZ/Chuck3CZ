@@ -26,6 +26,7 @@
   </tr>
   <tr> <a href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/Chuck3CZ" target="blank"> </a>
   </tr>
+  <tr> <a href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/Chuck3CZ" target="blank"> </a> </tr>
 </table>
 
 
