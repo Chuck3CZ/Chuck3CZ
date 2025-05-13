@@ -42,7 +42,7 @@
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 
-<a href="https://martin.gabrhelovi.cz" target="blank"> WEB Gabrhelovi.cz</a>
+Web <a href="https://martin.gabrhelovi.cz" target="blank"> martin.gabrhelovi.cz</a> 
 
 <a href="https://fb.com/gabrhel.martin" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="gabrhel.martin" height="30" width="40" /></a>
 <a href="https://instagram.com/gabrhel.martin" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="gabrhel.martin" height="30" width="40" /></a>
