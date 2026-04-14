@@ -69,14 +69,14 @@ Web <a href="https://martin.gabrhelovi.cz" target="blank"> martin.gabrhelovi.cz<
   <summary>Machine Specs</summary>
 <ul dir="auto">
 <li>CPU: Intel i7-9700 6C, 3.0 GHz, TBoost:4.70 GHz</li>
-<li>GPU: ASUS ROG Strix RADEON RX 6650xt 8GB Aura RGB</li>
+<li>GPU: ASUS ROG Strix RADEON RX 6650xt 8GB Aura RGB + GAINWARD 4060TI 16GB Nvidia</li>
 <li>RAM: 48GB (3x16GB) ADATA XPG SPECTRIX D41 DDR4-2666 CL16 Aura RGB</li>
 <li>Motherboard: Asus ROG Strix B360-G Gaming Aura Sync</li>
 <li>Cooler: SilentiumPC Fera 3 Aura RGB</li>
 <li>Case: DIY Case with Aura RGB</li>
 <li>Drives:
 <ul dir="auto">
-<li>Boot: Samsung 990 Pro 2TB NVMe</li>
+<li>Boot Win: Samsung 990 Pro 2TB NVMe</li>
 <li>Boot MacOS: Samsung 970 Evo Plus 500GB</li>
 <li>Game: Samsung 990 Pro 4TB NVMe</li>
 <li>Work: Seagate BarraCuda 6TB HDD</li>
