@@ -1,6 +1,6 @@
 <h1 align="center">Hi 👋, I am Martin "Chuck3CZ" Gabrhel</h1>
 <h3 align="center">Tech guy from Czech Republic 🇨🇿 </h3>
-
+<h4 align="center">Security, Bitcoin Nodes, IoT, testing, translations  </h3>
 
 <table align="center">
   <tr>
