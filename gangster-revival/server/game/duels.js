@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs';
 import { randomBytes } from 'node:crypto';
 import * as db from '../db.js';
 import { log } from '../config.js';
-import { pbHandlers } from './registry.js';
+import { xtHandlers, pbHandlers } from './registry.js';
 import { TYPE, catalog, makeItem, shopSelection } from './items.js';
 import { now, addXp, rankOf } from './player.js';
 import { START_ATTRIBUTES, xpForLevel, randInt } from './rules.js';
@@ -140,5 +140,49 @@ pbHandlers.startduel = (ctx, { opponentId }) => {
   sendStats(ctx);
   sendPing(ctx);
 };
+
+// sdu: duel screen opponent. param '1' = look for a new opponent.
+// reply: cooldown seconds, then id+name+level+family+gender+avatar+class
+function pickOpponent(p) {
+  const pool = db.allPlayers().filter((x) => x.id !== p.id && x.portrait && Math.abs(x.level - p.level) <= 3 + Math.floor(p.level / 5));
+  const all = pool.length ? pool : db.allPlayers().filter((x) => x.id !== p.id && x.portrait);
+  return all[randInt(0, Math.max(0, all.length - 1))];
+}
+
+// The client switches to the duel screen and requests data in the same frame; answering
+// instantly can beat the screen's event listeners, so reply after a short delay
+// (the original server had real network latency).
+const SCREEN_DELAY_MS = 400;
+
+xtHandlers.sdu = (ctx, [mode]) => {
+  const p = ctx.player;
+  if (!p) return;
+  let opp = p.duelOpponent && db.getPlayer(p.duelOpponent);
+  // '1' = screen opened (keep the current opponent), '0' = "next enemy" button
+  if (mode === '0' || !opp) {
+    opp = pickOpponent(p);
+    p.duelOpponent = opp?.id;
+    db.save();
+  }
+  setTimeout(() => {
+    const cooldown = Math.max(0, (p.nextFreeDuel || 0) - now());
+    if (!opp) return ctx.xt('sdu', 0, cooldown, '');
+    // classic gender ids: 1 female, 2 male (first digit of the avatar string)
+    const gender = opp.portrait.split('!')[0];
+    ctx.xt('sdu', 0, cooldown, [opp.id, opp.name, opp.level, '', gender, opp.portrait, opp.characterClass].join('+'));
+  }, SCREEN_DELAY_MS);
+};
+
+// vef: wanted fight info (cooldown, enemy picture, enemy class)
+xtHandlers.vef = (ctx) => {
+  const p = ctx.player;
+  if (!p) return;
+  p.wanted ??= { pic: randInt(1, 18), cls: randInt(1, 3) };
+  setTimeout(() => ctx.xt('vef', 0, Math.max(0, (p.nextWanted || 0) - now()), p.wanted.pic, p.wanted.cls), SCREEN_DELAY_MS);
+};
+
+// ssu: survival cooldown
+xtHandlers.ssu = (ctx) => ctx.player
+  && setTimeout(() => ctx.xt('ssu', 0, Math.max(0, (ctx.player.nextSurvival || 0) - now())), SCREEN_DELAY_MS);
 
 export { rankOf };

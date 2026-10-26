@@ -70,7 +70,8 @@ export function simulateFight(left, right, rnd = Math.random) {
       if (t > 20) dmg *= 1 + (t - 20) * 0.15;
       if (rnd() < a.stats.criticalHitChance) { dmg *= 2; hit.critical = true; }
       dmg *= 1 - d.stats.resistance;
-      hit.firstDmg = Math.max(1, Math.round(dmg));
+      // the client derives HP from the damage values; never go below zero
+      hit.firstDmg = Math.min(d.cur, Math.max(1, Math.round(dmg)));
       d.cur -= hit.firstDmg;
     }
     turns.push({ attacker, actions: [{ type: 1, hit }] });

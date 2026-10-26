@@ -140,9 +140,11 @@ function armamentAllowed(item) {
 
 pbHandlers.viewitems = (ctx, req) => ctx.player && sendShop(ctx, req.shop || SHOP.BLACK_MARKET);
 pbHandlers.viewinventory = (ctx) => ctx.player && sendInventory(ctx);
-pbHandlers.viewarmament = (ctx) => ctx.player && sendArmament(ctx);
-pbHandlers.viewgear = (ctx) => ctx.player && sendGear(ctx);
-pbHandlers.viewfood = (ctx) => ctx.player && sendFood(ctx);
+// these may ask for another player's equipment (duel preparation, profiles)
+const target = (ctx, req) => (req.playerId && db.getPlayer(req.playerId)) || ctx.player;
+pbHandlers.viewarmament = (ctx, req) => ctx.player && sendArmament(ctx, target(ctx, req));
+pbHandlers.viewgear = (ctx, req) => ctx.player && sendGear(ctx, target(ctx, req));
+pbHandlers.viewfood = (ctx, req) => ctx.player && sendFood(ctx, target(ctx, req));
 pbHandlers.getarmamentpresetstatus = (ctx) => ctx.pb('getarmamentpresetstatus', { unlockedArmaments: 1, activeArmament: 1, unlockCost: 0 });
 
 pbHandlers.buyitem = (ctx, { shop, source, target }) => {
