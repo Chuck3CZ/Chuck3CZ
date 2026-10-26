@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 // Downloads the official Goodgame Gangster desktop installer (preserved on the
-// Internet Archive), extracts the game files into ./client and tries to fetch the
-// original language files from the Wayback Machine into ./data/languages.
+// Internet Archive), extracts the game files into ./client and fetches the original
+// language files into ./data/languages.
 //
 //   npm run setup                      download + extract
 //   npm run setup -- --from FILE.exe   use an installer you already downloaded
-//   npm run setup -- --langs en,cs,de  which original language files to try
+//   npm run setup -- --langs en,cs      only these original language files
+//   npm run setup -- --mirror DIR       take language files from a CDN backup (default ./cdn-backup)
 import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, normalize, sep } from 'node:path';
@@ -16,6 +17,8 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const INSTALLER_URL = 'https://archive.org/download/goodgame-gangster-installer/GoodgameGangster_installer.exe';
 const INSTALLER_SHA256 = '3667e82c2bea228b72961fc94dda1df1ba71a77d2fcc952b3154e82607549c98';
 const PREFIX = 'Goodgame Gangster/';
+// languages listed in the client's MafiaLangVersion.properties
+const LANGS = ['en', 'cs', 'de', 'pl', 'fr', 'it', 'es', 'nl', 'pt', 'ru', 'tr', 'el', 'fi', 'sv', 'no', 'da', 'hu', 'ja', 'ko'];
 
 const args = process.argv.slice(2);
 const opt = (name, def) => { const i = args.indexOf(`--${name}`); return i >= 0 ? args[i + 1] : def; };
@@ -84,21 +87,39 @@ async function main() {
   }
   console.log(`Extracted ${n} game files into ${clientDir}`);
 
-  // Original language files (UI texts, item names, quests). Optional.
-  const langs = (opt('langs', 'en,cs')).split(',').filter(Boolean);
+  // Original language files (UI texts, item names, mission texts, enemy names). Goodgame's
+  // old CDN still serves them; the Wayback Machine is the fallback.
+  const langs = opt('langs', LANGS.join(',')).split(',').filter(Boolean);
+  let ok = 0;
   for (const lang of langs) {
     const target = join(langDir, `${lang}.ggs`);
-    if (existsSync(target)) { console.log(`language ${lang}: already present`); continue; }
-    const url = `https://web.archive.org/web/2019id_/http://gangster-data.goodgamestudios.com/games-languages/4/${lang}.ggs`;
-    try {
-      const data = await download(url);
-      if (data.subarray(0, 2).toString('latin1') !== 'PK') throw new Error('not a .ggs archive');
-      writeFileSync(target, data);
-      console.log(`language ${lang}: downloaded original file from the Wayback Machine`);
-    } catch (e) {
-      console.log(`language ${lang}: not available (${e.message}) - the generated fallback will be used`);
+    if (existsSync(target)) { ok++; continue; }
+    const urls = [
+      `https://files-ak.goodgamestudios.com/games-languages/4/${lang}.ggs`,
+      `https://media.goodgamestudios.com/games-languages/4/${lang}.ggs`,
+      `https://web.archive.org/web/2019id_/http://gangster-data.goodgamestudios.com/games-languages/4/${lang}.ggs`,
+    ];
+    let done = false;
+    // a local CDN backup (npm run backup-cdn, or an unpacked backup zip) wins
+    const mirror = join(opt('mirror', join(root, 'cdn-backup')), 'games-languages', '4', `${lang}.ggs`);
+    if (existsSync(mirror)) {
+      writeFileSync(target, readFileSync(mirror));
+      ok++;
+      continue;
     }
+    for (const url of urls) {
+      try {
+        const data = await download(url);
+        if (data.subarray(0, 2).toString('latin1') !== 'PK') throw new Error('not a .ggs archive');
+        writeFileSync(target, data);
+        done = true;
+        ok++;
+        break;
+      } catch { /* try the next source */ }
+    }
+    if (!done) console.log(`language ${lang}: not available - the generated English fallback will be used`);
   }
+  console.log(`Original language files: ${ok}/${langs.length} in ${langDir}`);
   console.log('\nDone. Start the server with:  npm start');
 }
 

@@ -2,3 +2,4 @@ node_modules/
 /client/
 /data/
 *.log
+/cdn-backup/

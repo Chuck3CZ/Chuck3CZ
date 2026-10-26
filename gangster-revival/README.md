@@ -53,13 +53,18 @@ Hodnoty (ceny, síla předmětů, XP tabulka, odměny) původně žily jen na se
 
 ## Texty / jazyky
 
-Texty hry byly v souboru `games-languages/4/<jazyk>.ggs` na CDN Goodgame, který v instalačce **není**. Bez něj server generuje náhradní anglické texty (rozumné popisky hlavních obrazovek, názvy předmětů typu „Pistol #12“, jména nepřátel). Pro originální texty (včetně **češtiny** – `cs.ggs`):
+Texty hry (UI, názvy předmětů, popisy misí, jména nepřátel) jsou v souborech `games-languages/4/<jazyk>.ggs`, které v instalačce nejsou. Starý CDN Goodgame (`files-ak.goodgamestudios.com`) je ale v roce 2026 pořád online, takže `npm run setup` stáhne originály všech 19 jazyků, včetně češtiny, do `data/languages/`. Pořadí zdrojů je: lokální záloha → CDN Goodgame → Wayback Machine. Když se nepodaří nic, server vygeneruje náhradní anglické texty.
 
-1. `npm run setup` se je pokusí stáhnout z Wayback Machine automaticky (`--langs en,cs,de`).
-2. Případně ručně: otevři
-   `https://web.archive.org/web/2019*/gangster-data.goodgamestudios.com/games-languages/4/*`,
-   stáhni `en.ggs` / `cs.ggs` a ulož je do `data/languages/`.
-3. Restartuj server. Jazyk se volí v pravém horním rohu stránky.
+### Záloha CDN
+
+Aby hra fungovala, i když Goodgame CDN vypne:
+
+```bash
+npm run backup-cdn          # zrcadlí CDN do ./cdn-backup (+ manifest.json se SHA-256 a zdrojovými URL)
+npm run setup -- --mirror cesta/k/cdn-backup   # instalace jen ze zálohy
+```
+
+Záloha obsahuje 25 jazykových souborů, konfigurace, originální `CookieSaver.swf`, prohlížečový build hry (`MafiaGame_2040.swf`) a všechny avatary, pozadí a erby. Do repozitáře se nenahrává (`.gitignore`), protože jde o soubory Goodgame Studios. Uchovávej ji mimo repozitář.
 
 ## Nastavení (proměnné prostředí)
 
@@ -116,7 +121,8 @@ server/
   data/commands.json  mapování příkaz → třída požadavku/odpovědi (157 příkazů)
   game/               herní logika (účty, inventář, obchody, mise, souboje, boti)
 tools/
-  setup.js            stažení a rozbalení klienta
+  setup.js            stažení a rozbalení klienta + jazyků
+  backup-cdn.js       záloha Goodgame CDN
   admin.js            správa hráčů
   re/                 vlastní SWF/ABC parser, pseudo-dekompilátor a extraktor protobuf schémat
 ```

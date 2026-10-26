@@ -22,9 +22,13 @@
   <h1 id="title">Gangster Revival</h1>
   <span>language
     <select id="lang">
-      <option value="GB">English</option><option value="CZ">Čeština</option><option value="DE">Deutsch</option>
+      <option value="CZ">Čeština</option><option value="GB">English</option><option value="DE">Deutsch</option>
       <option value="PL">Polski</option><option value="FR">Français</option><option value="IT">Italiano</option>
-      <option value="ES">Español</option><option value="NL">Nederlands</option><option value="RU">Русский</option>
+      <option value="ES">Español</option><option value="PT">Português</option><option value="NL">Nederlands</option>
+      <option value="RU">Русский</option><option value="TR">Türkçe</option><option value="GR">Ελληνικά</option>
+      <option value="HU">Magyar</option><option value="FI">Suomi</option><option value="SE">Svenska</option>
+      <option value="NO">Norsk</option><option value="DK">Dansk</option><option value="JP">日本語</option>
+      <option value="KR">한국어</option>
     </select>
   </span>
 </header>
@@ -37,9 +41,14 @@
   document.getElementById('title').textContent = cfg.serverName;
 
   const langSel = document.getElementById('lang');
-  let country = 'GB';
+  // ?country=CZ, then the last choice, then the browser language
+  const BY_LANG = { cs: 'CZ', sk: 'CZ', de: 'DE', pl: 'PL', fr: 'FR', it: 'IT', es: 'ES', pt: 'PT', nl: 'NL', ru: 'RU',
+    tr: 'TR', el: 'GR', hu: 'HU', fi: 'FI', sv: 'SE', no: 'NO', nb: 'NO', da: 'DK', ja: 'JP', ko: 'KR' };
+  let country = BY_LANG[(navigator.language || 'en').slice(0, 2).toLowerCase()] || 'GB';
   try { country = localStorage.getItem('gangster.country') || country; } catch {}
+  country = (new URLSearchParams(location.search).get('country') || country).toUpperCase();
   langSel.value = country;
+  if (!langSel.value) langSel.value = 'GB';
   langSel.onchange = () => {
     try { localStorage.setItem('gangster.country', langSel.value); } catch {}
     location.reload();
