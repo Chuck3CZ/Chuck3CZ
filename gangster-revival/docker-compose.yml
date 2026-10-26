@@ -1,0 +1,14 @@
+services:
+  gangster:
+    build: .
+    container_name: gangster
+    ports:
+      - "8882:8882"
+    volumes:
+      - ./data:/data
+    environment:
+      - SERVER_NAME=${SERVER_NAME:-Gangster Revival}
+      - START_CASH=${START_CASH:-1000}
+      - START_GOLD=${START_GOLD:-100}
+      - TIME_SCALE=${TIME_SCALE:-1}
+    restart: unless-stopped

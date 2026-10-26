@@ -69,9 +69,24 @@ async function serveFile(req, res, baseDir, rel, maxAge) {
   let st;
   try { st = await stat(p); } catch { return notFound(res); }
   if (!st.isFile()) return notFound(res);
+  const type = TYPES[extname(p).toLowerCase()] || 'application/octet-stream';
+  // precompressed copies made by tools/precompress.js (npm run precompress)
+  const accept = req.headers['accept-encoding'] || '';
+  for (const [enc, ext] of [['br', '.br'], ['gzip', '.gz']]) {
+    if (!new RegExp(`\\b${enc}\\b`).test(accept)) continue;
+    try {
+      const cst = await stat(p + ext);
+      if (cst.mtimeMs < st.mtimeMs) continue;
+      const body = await readFile(p + ext);
+      res.writeHead(200, {
+        'Content-Type': type, 'Content-Encoding': enc, 'Content-Length': body.length, Vary: 'Accept-Encoding',
+        'Access-Control-Allow-Origin': '*', 'Cache-Control': maxAge ? `public, max-age=${maxAge}` : 'no-cache',
+      });
+      return res.end(req.method === 'HEAD' ? undefined : body);
+    } catch { /* no precompressed copy */ }
+  }
   const body = await readFile(p);
-  return send(req, res, body, TYPES[extname(p).toLowerCase()] || 'application/octet-stream',
-    { cacheKey: `${p}:${st.mtimeMs}`, maxAge });
+  return send(req, res, body, type, { cacheKey: `${p}:${st.mtimeMs}`, maxAge });
 }
 
 let indexTemplate;

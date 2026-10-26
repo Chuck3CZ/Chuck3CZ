@@ -81,15 +81,24 @@ Záloha obsahuje 25 jazykových souborů, konfigurace, originální `CookieSaver
 
 Ladění klienta: `http://localhost:8080/?debug=1` zapne výpis `trace()` z klienta do konzole prohlížeče (vidíš i každou přijatou protobuf zprávu).
 
-## Nasazení na internet
+## Nasazení (Docker, např. na NAS)
 
-Za reverzní proxy s HTTPS (nginx, Caddy, Cloudflare Tunnel…) stačí přeposlat HTTP i WebSocket na port 8080. Stránka sama pozná `https` a připojí se přes `wss://<doména>/ws` (hlavička `X-Forwarded-Proto`). Příklad pro Caddy:
+Stejně jako `ps-server`: jeden kontejner, jeden port, data hráčů ve složce `./data`.
 
+```sh
+git clone https://git.gabrhelovi.cz/Martin/goodgamegangster.git   # soukromá kopie se zálohou
+cd goodgamegangster
+docker compose up -d --build
 ```
-gangster.example.com {
-    reverse_proxy localhost:8080
-}
-```
+
+Hra pak běží na `http://<adresa-nasu>:8882`. Hráči nic neinstalují, hra jde jen přes prohlížeč.
+
+- **Build:** hru připraví při sestavení image. Pokud repozitář obsahuje `archive/` a `cdn-backup/` (soukromá záloha), nic se nestahuje. Jinak se instalačka stáhne z Internet Archive a texty z CDN Goodgame. Ruffle se rovnou předkomprimuje (Brotli/gzip), takže se místo ~14 MB stáhnou zhruba 3 MB.
+- **Za reverzní proxy** (Cloudflare Tunnel, Caddy, nginx) stačí poslat hostname na `http://<nas>:8882`. WebSocket `/ws` jde stejnou cestou a stránka sama pozná `https` / `wss`.
+- **Nastavení** (`SERVER_NAME`, `START_CASH`, `START_GOLD`, `TIME_SCALE`) jde přes `.env` nebo `docker-compose.yml`.
+- **Data hráčů** jsou v `./data/db.json`. Zálohuj tuhle složku.
+- **Aktualizace:** `git pull && docker compose up -d --build`.
+- **Správa hráčů:** `docker compose exec gangster node tools/admin.js list` (změny dělej při zastaveném serveru: `docker compose stop`, pak `docker compose run --rm gangster node tools/admin.js …`).
 
 ## Správa hráčů
 

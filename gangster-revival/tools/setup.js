@@ -7,6 +7,7 @@
 //   npm run setup -- --from FILE.exe   use an installer you already downloaded
 //   npm run setup -- --langs en,cs      only these original language files
 //   npm run setup -- --mirror DIR       take language files from a CDN backup (default ./cdn-backup)
+//   npm run setup -- --lang-dir DIR     where to put the language files (default ./data/languages)
 import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, normalize, sep } from 'node:path';
@@ -59,7 +60,7 @@ function* zipEntries(buf) {
 
 async function main() {
   const clientDir = join(root, 'client');
-  const langDir = join(root, 'data', 'languages');
+  const langDir = opt('lang-dir', process.env.LANG_DIR || join(root, 'data', 'languages'));
   mkdirSync(clientDir, { recursive: true });
   mkdirSync(langDir, { recursive: true });
 

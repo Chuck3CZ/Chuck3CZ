@@ -1,0 +1,5 @@
+node_modules
+client
+data
+.git
+*.log

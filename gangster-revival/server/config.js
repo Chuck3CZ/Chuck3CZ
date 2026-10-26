@@ -14,11 +14,13 @@ export const config = {
   // Host/port the client is told to connect to. Ruffle maps this pair to the WebSocket,
   // the desktop client connects to it directly.
   socketHost: env.SOCKET_HOST || '127.0.0.1',
-  socketPort: Number(env.SOCKET_PORT || env.TCP_PORT || 9339),
+  socketPort: Number(env.SOCKET_PORT || Number(env.TCP_PORT) || 9339),
   zone: 'MafiaEx',
   serverName: env.SERVER_NAME || 'Gangster Revival',
   clientDir: resolve(root, env.CLIENT_DIR || 'client'),
   dataDir: resolve(root, env.DATA_DIR || 'data'),
+  // original language files (<lang>.ggs); defaults to <dataDir>/languages
+  langDir: env.LANG_DIR ? resolve(root, env.LANG_DIR) : null,
   logLevel: env.LOG_LEVEL || 'info',
   // everything is free / starting resources (handy for a private server)
   startCash: Number(env.START_CASH ?? 1000),

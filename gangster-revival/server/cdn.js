@@ -86,7 +86,7 @@ let generatedCache;
  * data/languages/. Without them the generated English fallback is served.
  */
 export function languageFile(lang, ext) {
-  const dir = join(config.dataDir, 'languages');
+  const dir = config.langDir || join(config.dataDir, 'languages');
   for (const name of [`${lang}.${ext}`, `${lang}.ggs`, `${lang}.xml`, 'en.ggs', 'en.xml']) {
     const p = join(dir, name);
     if (existsSync(p)) return { body: readFileSync(p), type: name.endsWith('.xml') ? 'text/xml' : 'application/octet-stream' };
