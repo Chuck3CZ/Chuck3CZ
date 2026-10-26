@@ -67,9 +67,10 @@ export function actionProgress(p) {
 export function sendMissions(ctx) {
   const p = ctx.player;
   tickEnergy(p);
-  const busy = p.status !== STATUS.FREE;
+  // always OK: the client only builds its mission screen data from an OK response;
+  // whether the player is busy is reported through the ping (png) status
   ctx.pb('viewmissions', {
-    result: busy ? 2 : 1,
+    result: 1,
     energyRefiller: 0,
     freeMissionEnergyDrinks: 0,
     maxEnergyRefill: 10,

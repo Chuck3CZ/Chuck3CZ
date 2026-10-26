@@ -15,7 +15,9 @@ const INVENTORY_ROW_PRICE = 20; // gold per row of 5
 const STACK_LIMIT = 9999;
 const FOOD_SLOTS = 1;
 
-const EMPTY = { id: 0 };
+// Empty slot. PBItem's id, quality, type, costs, isGoldPrice and levels are proto2 "required"
+// fields: the client crashes while printing a message that lacks them.
+const EMPTY = { id: 0, quality: 1, type: 1, costs: { buy: 0, sell: 0 }, isGoldPrice: false, levels: { min: 0, max: 0 } };
 
 function ensureInventory(p) {
   p.inventorySize ??= INVENTORY_START;

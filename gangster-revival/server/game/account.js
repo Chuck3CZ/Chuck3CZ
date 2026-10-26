@@ -52,7 +52,8 @@ export function sendPing(ctx) {
   const prog = actionProgress(p); // progress+time+giver+action
   const police = '0+0+0+0'; // seconds left, effect, value, bail cost
   const duelCooldown = Math.max(0, (p.nextFreeDuel || 0) - now());
-  ctx.xt('png', 0, p.status || STATUS.FREE, p.city - 1, prog, 0, police, duelCooldown > 0 ? duelCooldown : 0, '');
+  // classic status codes are the protobuf PBPlayerStatus values minus one (0 = free)
+  ctx.xt('png', 0, (p.status || STATUS.FREE) - 1, p.city - 1, prog, 0, police, duelCooldown > 0 ? duelCooldown : 0, '');
 }
 
 /** Everything that changes when stats/currency change. */
