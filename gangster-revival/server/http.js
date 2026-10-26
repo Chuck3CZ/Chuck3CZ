@@ -100,8 +100,12 @@ async function route(req, res) {
   if (path.startsWith('/game/')) return serveFile(req, res, config.clientDir, path.slice(6), 3600);
   if (path.startsWith('/static/')) return serveFile(req, res, publicDir, path.slice(8), 3600);
 
-  if (path.startsWith('/cdn/')) {
-    const p = path.slice(4);
+  // /cdn/... is where Ruffle's URL rewrite sends Goodgame CDN requests. The same paths are
+  // accepted at the root for the desktop client with gangster-*.goodgamestudios.com
+  // pointed at this server through the hosts file.
+  const cdnRoot = /^\/(CookieSaver\.swf|games-config\/|games-netconf|games-languages|clienttracker\.php|loader\/)/.test(path);
+  if (path.startsWith('/cdn/') || cdnRoot) {
+    const p = cdnRoot ? path : path.slice(4);
     if (req.method === 'POST') { res.writeHead(200, { 'Access-Control-Allow-Origin': '*' }); return res.end(''); }
     if (p.endsWith('/CookieSaver.swf')) return send(req, res, cookieSaverSwf(), TYPES['.swf']);
     if (p.endsWith('/games-config/country_new2.xml')) return send(req, res, Buffer.from(countryXml()), TYPES['.xml']);

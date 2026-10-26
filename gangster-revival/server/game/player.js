@@ -96,7 +96,7 @@ export function equippedItems(p) {
 }
 
 export function totalAttributes(p) {
-  return sumAttributes(p.attributes, ...p.gear.map((i) => i.attributes), ...p.food.map((i) => i.attributes && {
+  return sumAttributes(p.attributes, ...p.gear.map((i) => i.attributes), ...p.food.filter(Boolean).map((i) => i.attributes && {
     attack: Math.round(p.attributes.attack * (i.attributes.attack || 0) / 100),
     endurance: Math.round(p.attributes.endurance * (i.attributes.endurance || 0) / 100),
     luck: Math.round(p.attributes.luck * (i.attributes.luck || 0) / 100),
@@ -158,7 +158,7 @@ export function oudPayload(p) {
   const nextEnergyIn = p.energy >= MAX_ENERGY ? 0 : ENERGY_REGEN_SECONDS - (now() - p.energyAt);
   // AP, level, xp, xp@level, xp@next, energy, (unused), seconds to next energy tick, energy per tick, defense
   const fields = [
-    0, p.level, p.xp, xpForLevel(p.level), xpForLevel(p.level + 1), p.energy,
+    p.ap || 0, p.level, p.xp, xpForLevel(p.level), xpForLevel(p.level + 1), p.energy,
     0, nextEnergyIn, ENERGY_TICK, totalAttributes(p).toughness,
   ];
   return fields.join('+');

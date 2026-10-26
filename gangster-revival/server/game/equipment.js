@@ -13,7 +13,8 @@ const INVENTORY_START = 10;
 const INVENTORY_MAX = 40;
 const INVENTORY_ROW_PRICE = 20; // gold per row of 5
 const STACK_LIMIT = 9999;
-const FOOD_SLOTS = 1;
+const FOOD_SLOTS = 3;
+const GEAR_SLOTS = 8; // one per PBGearType (vehicle, house, pet, luxury, bodyguard, accessory, tattoo, lucky charm)
 
 // Empty slot. PBItem's id, quality, type, costs, isGoldPrice and levels are proto2 "required"
 // fields: the client crashes while printing a message that lacks them.
@@ -49,13 +50,21 @@ export function sendArmament(ctx, p = ctx.player) {
   });
 }
 
+// The client indexes gear by gear type and food by slot, so both are sent as fixed-size
+// slot lists with empty placeholders.
 export function sendGear(ctx, p = ctx.player) {
-  ctx.pb('viewgear', { playerId: p.id, items: p.gear.map(pbItem) });
+  const slots = Array.from({ length: GEAR_SLOTS }, (_, i) => p.gear.find((g) => g.subType === i + 1));
+  ctx.pb('viewgear', { playerId: p.id, items: slots.map((g) => (g ? pbItem(g) : EMPTY)) });
+}
+
+function foodSlots(p) {
+  const slots = Array.from({ length: FOOD_SLOTS }, (_, i) => p.food[i] || null);
+  p.food = slots.map((f) => (f && (!f.expires || f.expires > now()) ? f : null));
+  return p.food;
 }
 
 export function sendFood(ctx, p = ctx.player) {
-  p.food = p.food.filter((f) => !f.expires || f.expires > now());
-  ctx.pb('viewfood', { playerId: p.id, items: p.food.map(pbItem) });
+  ctx.pb('viewfood', { playerId: p.id, items: foodSlots(p).map((f) => (f ? pbItem(f) : EMPTY)) });
 }
 
 export function sendEquipment(ctx) {
@@ -245,26 +254,30 @@ pbHandlers.unequipgear = (ctx, { source, target }) => {
   sendAfterEquip(ctx);
 };
 
-pbHandlers.equipfood = (ctx, { source }) => {
+pbHandlers.equipfood = (ctx, { source, target }) => {
   const p = ctx.player;
   ensureInventory(p);
   const item = p.inventory[source];
   if (!item) return ctx.pb('equipfood', { result: 4 });
   if (item.type !== TYPE.FOOD) return ctx.pb('equipfood', { result: 6 });
-  p.food = p.food.filter((f) => !f.expires || f.expires > now());
-  if (p.food.length >= FOOD_SLOTS) return ctx.pb('equipfood', { result: 7 });
+  const slots = foodSlots(p);
+  if (slots.some((f) => f && f.id === item.id)) return ctx.pb('equipfood', { result: 7 });
+  let slot = target;
+  if (slot === undefined || slot >= FOOD_SLOTS || slots[slot]) slot = slots.findIndex((f) => !f);
+  if (slot < 0) return ctx.pb('equipfood', { result: 5 });
   item.expires = now() + (item.duration?.total || 3600);
-  p.food.push(item);
+  slots[slot] = item;
   p.inventory[source] = null;
   db.save();
   ctx.pb('equipfood', { result: 1 });
   sendAfterEquip(ctx);
 };
 
-pbHandlers.unequipfood = (ctx) => {
+pbHandlers.unequipfood = (ctx, { source = 0 }) => {
   const p = ctx.player;
-  if (!p.food.length) return ctx.pb('unequipfood', { result: 3 });
-  p.food = []; // eaten food is gone
+  const slots = foodSlots(p);
+  if (!slots[source]) return ctx.pb('unequipfood', { result: 3 });
+  slots[source] = null; // eaten food is gone
   db.save();
   ctx.pb('unequipfood', { result: 1 });
   sendAfterEquip(ctx);

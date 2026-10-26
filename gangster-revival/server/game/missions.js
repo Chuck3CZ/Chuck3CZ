@@ -25,7 +25,7 @@ function newMission(p, nr) {
     id: randInt(1, 1000),
     cash: Math.round((15 + lvl * 6) * (0.6 + mins * 0.4) * (0.8 + Math.random() * 0.4)),
     xp: Math.round((8 + lvl * 2) * (0.6 + mins * 0.35) * (0.8 + Math.random() * 0.4)),
-    activity: Math.round(60 + mins * 20),
+    activity: Math.max(1, Math.round(mins * 2)), // activity points reward
     time,
     opponentClass: randInt(1, 3),
     picId: randInt(1, 19),
@@ -48,6 +48,12 @@ function missions(p) {
     db.save();
   }
   return p.missions;
+}
+
+// The client shows (and checks) a mission's energy cost as its duration in minutes;
+// internally energy is stored x10 (the HUD shows energy / 10).
+export function missionEnergyCost(m) {
+  return Math.max(1, Math.ceil(m.time / 60)) * 10;
 }
 
 function pbMission(m) {
@@ -98,8 +104,9 @@ pbHandlers.startmission = (ctx, { missionNumber = 0 }) => {
   if (p.status !== STATUS.FREE) return ctx.pb('startmission', { result: 2 });
   const m = missions(p)[missionNumber];
   if (!m) return ctx.pb('startmission', { result: 4 });
-  if (p.energy < m.activity) return ctx.pb('startmission', { result: 3 });
-  p.energy -= m.activity;
+  const cost = missionEnergyCost(m);
+  if (p.energy < cost) return ctx.pb('startmission', { result: 3 });
+  p.energy -= cost;
   if (p.energy < 1000) p.energyAt = Math.min(p.energyAt, now());
   const duration = scaled(m.time);
   p.status = STATUS.MISSION;
@@ -130,7 +137,9 @@ pbHandlers.quitmission = (ctx) => {
   if (leftWon) {
     reward.cash = m.cash;
     reward.xp = m.xp;
+    reward.activity = m.activity;
     p.cash += m.cash;
+    p.ap = (p.ap || 0) + m.activity;
     addXp(p, m.xp);
     if (m.item) {
       const slot = p.inventory.findIndex((x) => !x);
