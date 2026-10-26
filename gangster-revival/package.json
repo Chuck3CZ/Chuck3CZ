@@ -1,0 +1,18 @@
+{
+  "name": "gangster-revival",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Fan-made revival server for Goodgame Gangster (Goodgame Mafia) playable in the browser via Ruffle",
+  "type": "module",
+  "scripts": {
+    "setup": "node tools/setup.js",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "@ruffle-rs/ruffle": "0.7.1",
+    "ws": "8.22.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

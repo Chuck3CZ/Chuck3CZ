@@ -1,0 +1,591 @@
+{
+ "pb": {
+  "addarmament": {
+   "cls": "AddArmamentCommand",
+   "req": "PBEquipmentAddArmamentRequest",
+   "res": "PBEquipmentAddArmamentResponse"
+  },
+  "availablecrestparts": {
+   "cls": "GetAvailableFamilyCrestPartsCommand",
+   "req": "PBFamilyCrestAvailableCrestPartsRequest",
+   "res": "PBFamilyCrestAvailableCrestPartsResponse"
+  },
+  "buycards": {
+   "cls": "BuyCardsCommand",
+   "req": "PBSpecialeventLuckydevilBuyCardsRequest",
+   "res": "PBSpecialeventLuckydevilBuyCardsResponse"
+  },
+  "buyitem": {
+   "cls": "BuyItemCommand",
+   "req": "PBShopBuyItemRequest",
+   "res": "PBShopBuyItemResponse"
+  },
+  "buymissionbooster": {
+   "cls": "BuyMissionBoosterCommand",
+   "req": "PBMissionBoosterBuyMissionBoosterRequest",
+   "res": "PBMissionBoosterBuyMissionBoosterResponse"
+  },
+  "changearmament": {
+   "cls": "ChangeArmamentCommand",
+   "req": "PBEquipmentChangeArmamentRequest",
+   "res": "PBEquipmentChangeArmamentResponse"
+  },
+  "changebulletinboard": {
+   "cls": "FamilyChangeBulletinBoardCommand",
+   "req": "PBFamilyChangeBulletinBoardRequest",
+   "res": "PBFamilyChangeBulletinBoardResponse"
+  },
+  "changecrest": {
+   "cls": "ChangeCrestCommand",
+   "req": "PBFamilyChangeCrestRequest",
+   "res": "PBFamilyChangeCrestResponse"
+  },
+  "changefamilymemberstatus": {
+   "cls": "ChangeFamilyMemberStatusCommand",
+   "req": "PBFamilyChangeFamilyMemberStatusRequest",
+   "res": "PBFamilyChangeFamilyMemberStatusResponse"
+  },
+  "changeinventory": {
+   "cls": "ChangeInventoryCommand",
+   "req": "PBEquipmentChangeInventoryRequest",
+   "res": "PBEquipmentChangeInventoryResponse"
+  },
+  "cityevent": {
+   "cls": "CityEventStateCommand",
+   "req": "PBSpecialeventCityEventRequest",
+   "res": "PBSpecialeventCityEventResponse"
+  },
+  "cityeventprogress": {
+   "cls": "CityEventProgressCommand",
+   "req": "PBSpecialeventCityCityEventProgressRequest",
+   "res": "PBSpecialeventCityCityEventProgressResponse"
+  },
+  "clearsafe": {
+   "cls": "ClearSafeCommand",
+   "req": "PBShopClearSafeRequest",
+   "res": "PBShopClearSafeResponse"
+  },
+  "createavatar": {
+   "cls": "CreateAvatarCommand",
+   "req": "PBAccountCreateAvatarRequest",
+   "res": "PBAccountCreateAvatarResponse"
+  },
+  "createfamily": {
+   "cls": "CreateFamilyCommand",
+   "req": "PBFamilyCreateFamilyRequest",
+   "res": "PBFamilyCreateFamilyResponse"
+  },
+  "deletemessage": {
+   "cls": "DeleteMessageCommand",
+   "req": "PBMessageDeleteMessageRequest",
+   "res": "PBMessageDeleteMessageResponse"
+  },
+  "donatefamily": {
+   "cls": "DonateFamilyCommand",
+   "req": "PBFamilyDonateFamilyRequest",
+   "res": "PBFamilyDonateFamilyResponse"
+  },
+  "equiparmament": {
+   "cls": "EquipArmamentCommand",
+   "req": "PBEquipmentEquipArmamentRequest",
+   "res": "PBEquipmentEquipArmamentResponse"
+  },
+  "equipfood": {
+   "cls": "EquipFoodCommand",
+   "req": "PBEquipmentEquipFoodRequest",
+   "res": "PBEquipmentEquipFoodResponse"
+  },
+  "equipgear": {
+   "cls": "EquipGearCommand",
+   "req": "PBEquipmentEquipGearRequest",
+   "res": "PBEquipmentEquipGearResponse"
+  },
+  "familymessage": {
+   "cls": "FamilyMessageCommand",
+   "req": "PBFamilyFamilyMessageRequest",
+   "res": "PBFamilyFamilyMessageResponse"
+  },
+  "finishquest": {
+   "cls": "FinishQuestCommand",
+   "req": "PBQuestFinishQuestRequest",
+   "res": "PBQuestFinishQuestResponse"
+  },
+  "getactivequests": {
+   "cls": "GetActiveQuestsCommand",
+   "req": "PBQuestGetActiveQuestsRequest",
+   "res": "PBQuestGetActiveQuestsResponse"
+  },
+  "getarmamentpresetstatus": {
+   "cls": "GetArmamentPresetStatusCommand",
+   "req": "PBEquipmentGetArmamentPresetStatusRequest",
+   "res": "PBEquipmentGetArmamentPresetStatusResponse"
+  },
+  "getbulletinboard": {
+   "cls": "FamilyGetBulletinBoardCommand",
+   "req": "PBFamilyGetBulletinBoardRequest",
+   "res": "PBFamilyGetBulletinBoardResponse"
+  },
+  "getfeaturestatus": {
+   "cls": "GetFeatureStatus",
+   "req": "PBFeaturestatusGetFeatureStatusRequest",
+   "res": "PBFeaturestatusGetFeatureStatusResponse"
+  },
+  "getmessagesstatus": {
+   "cls": "GetMessagesStatusCommand",
+   "req": "PBMessageGetMessagesStatusRequest",
+   "res": "PBMessageGetMessagesStatusResponse"
+  },
+  "getplayerbooster": {
+   "cls": "GetPlayerBoosterCommand",
+   "req": "PBMissionBoosterGetPlayerBoosterRequest",
+   "res": "PBMissionBoosterGetPlayerBoosterResponse"
+  },
+  "goworking": {
+   "cls": "GoWorkingCommand",
+   "req": "PBWorkGoWorkingRequest",
+   "res": "PBWorkGoWorkingResponse"
+  },
+  "healtournamentplayer": {
+   "cls": "HealTournamentPlayerCommand",
+   "req": "PBSpecialeventTournamentHealTournamentPlayerRequest",
+   "res": "PBSpecialeventTournamentHealTournamentPlayerResponse"
+  },
+  "initiate": {
+   "cls": "InitiateClanWarCommand",
+   "req": "PBFamilyWarInitiateRequest",
+   "res": "PBFamilyWarInitiateResponse"
+  },
+  "inviteplayertofamily": {
+   "cls": "InvitePlayerToFamilyCommand",
+   "req": "PBFamilyInvitePlayerToFamilyRequest",
+   "res": "PBFamilyInvitePlayerToFamilyResponse"
+  },
+  "joinfamily": {
+   "cls": "JoinFamilyCommand",
+   "req": "PBFamilyJoinFamilyRequest",
+   "res": "PBFamilyJoinFamilyResponse"
+  },
+  "loginwelcome": {
+   "cls": "LoginWelcomeCommand",
+   "req": "PBMiscLoginWelcomeRequest",
+   "res": "PBMiscLoginWelcomeResponse"
+  },
+  "lookingforfamily": {
+   "cls": "LookingForFamilyCommand",
+   "req": "PBFamilyLookingForFamilyRequest",
+   "res": "PBFamilyLookingForFamilyResponse"
+  },
+  "luckydevil": {
+   "cls": "LuckyDevilCommand",
+   "req": "PBSpecialeventLuckydevilRequest",
+   "res": "PBSpecialeventLuckydevilResponse"
+  },
+  "newachievements": {
+   "cls": "NewAchievementsCommand",
+   "req": "PBMiscNewAchievementsRequest",
+   "res": "PBMiscNewAchievementsResponse"
+  },
+  "opencontainer": {
+   "cls": "OpenContainerCommand",
+   "req": "PBEquipmentOpenContainerRequest",
+   "res": "PBEquipmentOpenContainerResponse"
+  },
+  "orderitems": {
+   "cls": "OrderItemsCommand",
+   "req": "PBShopOrderItemsRequest",
+   "res": "PBShopOrderItemsResponse"
+  },
+  "participate": {
+   "cls": "ParticipateClanWarCommand",
+   "req": "PBFamilyWarParticipateRequest",
+   "res": "PBFamilyWarParticipateResponse"
+  },
+  "pausequest": {
+   "cls": "PauseQuestCommand",
+   "req": "PBQuestPauseQuestRequest",
+   "res": "PBQuestPauseQuestResponse"
+  },
+  "paycityeventmissioncooldown": {
+   "cls": "PayCityEventMissionCooldownCommand",
+   "req": "PBSpecialeventCityPayCityEventMissionCooldownRequest",
+   "res": "PBSpecialeventCityPayCityEventMissionCooldownResponse"
+  },
+  "paymentinfo": {
+   "cls": "PaymentInfoCommand",
+   "req": "PBMiscPaymentInfoRequest",
+   "res": "PBMiscPaymentInfoResponse"
+  },
+  "playercurrency": {
+   "cls": "PlayerCurrencyCommand",
+   "req": "PBMiscPlayerCurrencyRequest",
+   "res": "PBMiscPlayerCurrencyResponse"
+  },
+  "playerprofile": {
+   "cls": "PlayerProfileCommand",
+   "req": "PBMiscPlayerProfileRequest",
+   "res": "PBMiscPlayerProfileResponse"
+  },
+  "policebadgeconversion": {
+   "cls": "PoliceBadgeConversionCommand",
+   "req": "PBSpecialeventPoliceBadgeConversionRequest",
+   "res": "PBSpecialeventPoliceBadgeConversionResponse"
+  },
+  "policeencounter": {
+   "cls": "PoliceEncounterCommand",
+   "req": "PBFightPoliceEncounterRequest",
+   "res": "PBFightPoliceEncounterResponse"
+  },
+  "prepareduelfight": {
+   "cls": "PrepareDuelFightCommand",
+   "req": "PBFightPrepareDuelFightRequest",
+   "res": "PBFightPrepareDuelFightResponse"
+  },
+  "quitcityeventmission": {
+   "cls": "QuitCityEventMissionCommand",
+   "req": "PBSpecialeventCityQuitmissionRequest",
+   "res": "PBSpecialeventCityQuitmissionResponse"
+  },
+  "quitmission": {
+   "cls": "QuitMissionCommand",
+   "req": "PBMissionQuitMissionRequest",
+   "res": "PBMissionQuitMissionResponse"
+  },
+  "quittravelflight": {
+   "cls": "QuitTravelFlightCommand",
+   "req": "PBTravelQuitTravelFlightRequest",
+   "res": "PBTravelQuitTravelFlightResponse"
+  },
+  "rankingsearch": {
+   "cls": "SearchRankingCommand",
+   "req": "PBRankingRankingSearchRequest",
+   "res": "PBRankingRankingSearchResponse"
+  },
+  "readmessages": {
+   "cls": "ReadMessageCommand",
+   "req": "PBMessageReadMessagesRequest",
+   "res": "PBMessageReadMessagesResponse"
+  },
+  "registerfortournament": {
+   "cls": "RegisterForTournamentCommand",
+   "req": "PBSpecialeventTournamentRegisterForTournamentRequest",
+   "res": "PBSpecialeventTournamentRegisterForTournamentResponse"
+  },
+  "saveitem": {
+   "cls": "SaveItemCommand",
+   "req": "PBShopSaveItemRequest",
+   "res": "PBShopSaveItemResponse"
+  },
+  "searchtournamentplayer": {
+   "cls": "SearchTournamentPlayerCommand",
+   "req": "PBSpecialeventTournamentSearchtournamentplayerRequest",
+   "res": "PBSpecialeventTournamentSearchtournamentplayerResponse"
+  },
+  "selectcityfightitem": {
+   "cls": "SelectCityFightItemCommand",
+   "req": "PBFightSelectCityFightItemRequest",
+   "res": "PBFightSelectCityFightItemResponse"
+  },
+  "sellitem": {
+   "cls": "SellItemCommand",
+   "req": "PBShopSellItemRequest",
+   "res": "PBShopSellItemResponse"
+  },
+  "setactivearmament": {
+   "cls": "SetActiveArmamentCommand",
+   "req": "PBEquipmentSetActiveArmamentRequest",
+   "res": "PBEquipmentSetActiveArmamentResponse"
+  },
+  "showcityeventopponents": {
+   "cls": "ShowCityEventOpponentCommand",
+   "req": "PBSpecialeventCityShowCityEventOpponentsRequest",
+   "res": "PBSpecialeventCityShowCityEventOpponentsResponse"
+  },
+  "showcityfight": {
+   "cls": "ShowCityFightCommand",
+   "req": "PBFightShowCityFightRequest",
+   "res": "PBFightShowCityFightResponse"
+  },
+  "showcityfightitems": {
+   "cls": "ShowCityFightItemsCommand",
+   "req": "PBFightShowCityFightItemsRequest",
+   "res": "PBFightShowCityFightItemsResponse"
+  },
+  "showclanwar": {
+   "cls": "ShowClanWarCommand",
+   "req": "PBFightShowFamilyWarRequest",
+   "res": "PBFightShowFamilyWarResponse"
+  },
+  "showfamily": {
+   "cls": "ShowClanCommand",
+   "req": "PBFamilyShowFamilyRequest",
+   "res": "PBFamilyShowFamilyResponse"
+  },
+  "showgangwars": {
+   "cls": "ShowGangWarsCommand",
+   "req": "PBGangwarShowGangWarsRequest",
+   "res": "PBGangwarShowGangWarsResponse"
+  },
+  "showmissionbooster": {
+   "cls": "ShowMissionBoosterCommand",
+   "req": "PBMissionBoosterShowMissionBoosterRequest",
+   "res": "PBMissionBoosterShowMissionBoosterResponse"
+  },
+  "shownews": {
+   "cls": "ShowNewsCommand",
+   "req": "PBMessageShowNewsRequest",
+   "res": "PBMessageShowNewsResponse"
+  },
+  "showremainingtournamentplayers": {
+   "cls": "ShowRemainingTournamentPlayersCommand",
+   "req": "PBSpecialeventTournamentRemainingtournamentplayerRequest",
+   "res": "PBSpecialeventTournamentRemainingtournamentplayerResponse"
+  },
+  "showtournamentfinals": {
+   "cls": "ShowTournamentFinalsCommand",
+   "req": "PBSpecialeventTournamentShowTournamentFinalsRequest",
+   "res": "PBSpecialeventTournamentShowTournamentFinalsResponse"
+  },
+  "showtournamentinfos": {
+   "cls": "ShowTournamentInfoCommand",
+   "req": "PBSpecialeventTournamentShowTournamentInfosRequest",
+   "res": "PBSpecialeventTournamentShowTournamentInfosResponse"
+  },
+  "showtravelpossibilities": {
+   "cls": "ShowTravelPossibilitiesCommand",
+   "req": "PBTravelShowTravelPossibilitiesRequest",
+   "res": "PBTravelShowTravelPossibilitiesResponse"
+  },
+  "specialcalendar": {
+   "cls": "SpecialCalendarCommand",
+   "req": "PBSpecialeventSpecialCalendarRequest",
+   "res": "PBSpecialeventSpecialCalendarResponse"
+  },
+  "specialwanted": {
+   "cls": "SpecialWantedCommand",
+   "req": "PBSpecialeventSpecialWantedRequest",
+   "res": "PBSpecialeventSpecialWantedResponse"
+  },
+  "startcityeventfight": {
+   "cls": "StartCityEventFightCommand",
+   "req": "PBSpecialeventCityStartCityEventFightRequest",
+   "res": "PBSpecialeventCityStartCityEventFightResponse"
+  },
+  "startcityeventmission": {
+   "cls": "StartCityEventMissionCommand",
+   "req": "PBSpecialeventCityStartCityEventMissionRequest",
+   "res": "PBSpecialeventCityStartCityEventMissionResponse"
+  },
+  "startcityfight": {
+   "cls": "StartCityFightCommand",
+   "req": "PBFightStartCityFightRequest",
+   "res": "PBFightStartCityFightResponse"
+  },
+  "startduel": {
+   "cls": "StartDuelFightCommand",
+   "req": "PBFightStartDuelRequest",
+   "res": "PBFightStartDuelResponse"
+  },
+  "startgangwar": {
+   "cls": "StartGangwarFightCommand",
+   "req": "PBFightStartgangwarRequest",
+   "res": "PBFightStartgangwarResponse"
+  },
+  "startmission": {
+   "cls": "StartMissionCommand",
+   "req": "PBMissionStartRequest",
+   "res": "PBMissionStartResponse"
+  },
+  "startpolicefight": {
+   "cls": "StartPoliceFightCommand",
+   "req": "PBFightStartPoliceFightRequest",
+   "res": "PBFightStartPoliceFightResponse"
+  },
+  "startquest": {
+   "cls": "StartQuestCommand",
+   "req": "PBQuestStartQuestRequest",
+   "res": "PBQuestStartQuestResponse"
+  },
+  "startsurvivalfight": {
+   "cls": "StartSurvivalFightCommand",
+   "req": "PBFightStartSurvivalFightRequest",
+   "res": "PBFightStartSurvivalFightResponse"
+  },
+  "starttravelflight": {
+   "cls": "StartTravelFlightCommand",
+   "req": "PBTravelStartTravelFlightRequest",
+   "res": "PBTravelStartTravelFlightResponse"
+  },
+  "startwantedfight": {
+   "cls": "StartWantedFightCommand",
+   "req": "PBFightStartWantedFightRequest",
+   "res": "PBFightStartWantedFightResponse"
+  },
+  "stopworking": {
+   "cls": "StopWorkingCommand",
+   "req": "PBWorkStopWorkingRequest",
+   "res": "PBWorkStopWorkingResponse"
+  },
+  "survivalstatus": {
+   "cls": "SurvivalStatusCommand",
+   "req": "PBFightSurvivalStatusRequest",
+   "res": "PBFightSurvivalStatusResponse"
+  },
+  "testfight": {
+   "cls": "TestFightCommand",
+   "req": "PBFightTestTestFightRequest",
+   "res": "PBFightTestTestFightResponse"
+  },
+  "tournament": {
+   "cls": "TournamentCommand",
+   "req": "PBSpecialeventTournamentRequest",
+   "res": "PBSpecialeventTournamentResponse"
+  },
+  "tournamentroundreport": {
+   "cls": "TournamentRoundReportsCommand",
+   "req": "PBSpecialeventTournamentTournamentroundreportRequest",
+   "res": "PBSpecialeventTournamentTournamentroundreportResponse"
+  },
+  "turncard": {
+   "cls": "TurnCardCommand",
+   "req": "PBSpecialeventLuckydevilTurnCardRequest",
+   "res": "PBSpecialeventLuckydevilTurnCardResponse"
+  },
+  "unequiparmament": {
+   "cls": "UnequipArmamentCommand",
+   "req": "PBEquipmentUnequipArmamentRequest",
+   "res": "PBEquipmentUnequipArmamentResponse"
+  },
+  "unequipfood": {
+   "cls": "UnequipFoodCommand",
+   "req": "PBEquipmentUnequipFoodRequest",
+   "res": "PBEquipmentUnequipFoodResponse"
+  },
+  "unequipgear": {
+   "cls": "UnequipGearCommand",
+   "req": "PBEquipmentUnequipGearRequest",
+   "res": "PBEquipmentUnequipGearResponse"
+  },
+  "unlockarmament": {
+   "cls": "UnlockArmamentCommand",
+   "req": "PBEquipmentUnlockArmamentRequest",
+   "res": "PBEquipmentUnlockArmamentResponse"
+  },
+  "unlockinventory": {
+   "cls": "UnlockInventoryCommand",
+   "req": "PBEquipmentUnlockInventoryRequest",
+   "res": "PBEquipmentUnlockInventoryResponse"
+  },
+  "unlocknextday": {
+   "cls": "UnlockNextDayCommand",
+   "req": "PBSpecialeventCalendarUnlockNextDayRequest",
+   "res": "PBSpecialeventCalendarUnlockNextDayResponse"
+  },
+  "updatefamilybonus": {
+   "cls": "UpdateClanBonusCommand",
+   "req": "PBFamilyUpdatefamilyboosterRequest",
+   "res": "PBFamilyUpdatefamilyboosterResponse"
+  },
+  "updatequest": {
+   "cls": "UpdateQuestCommand",
+   "req": "null",
+   "res": "PBQuestUpdateQuestResponse"
+  },
+  "viewarmament": {
+   "cls": "ViewArmamentCommand",
+   "req": "PBEquipmentViewArmamentRequest",
+   "res": "PBEquipmentViewArmamentResponse"
+  },
+  "viewfood": {
+   "cls": "ViewFoodCommand",
+   "req": "PBEquipmentViewFoodRequest",
+   "res": "PBEquipmentViewFoodResponse"
+  },
+  "viewgear": {
+   "cls": "ViewGearCommand",
+   "req": "PBEquipmentViewGearRequest",
+   "res": "PBEquipmentViewGearResponse"
+  },
+  "viewinventory": {
+   "cls": "ViewInventoryCommand",
+   "req": "PBEquipmentViewInventoryRequest",
+   "res": "PBEquipmentViewInventoryResponse"
+  },
+  "viewitems": {
+   "cls": "ViewItemsCommand",
+   "req": "PBShopViewItemsRequest",
+   "res": "PBShopViewItemsResponse"
+  },
+  "viewmissions": {
+   "cls": "ViewMissionCommand",
+   "req": "PBMissionViewRequest",
+   "res": "PBMissionViewResponse"
+  },
+  "viewquestbook": {
+   "cls": "ViewQuestBookCommand",
+   "req": "PBQuestViewQuestBookRequest",
+   "res": "PBQuestViewQuestBookResponse"
+  },
+  "viewtournamentfight": {
+   "cls": "ViewTournamentFightCommand",
+   "req": "PBSpecialeventTournamentViewTournamentFightRequest",
+   "res": "PBSpecialeventTournamentViewTournamentFightResponse"
+  },
+  "viewwork": {
+   "cls": "ViewWorkCommand",
+   "req": "PBWorkViewWorkRequest",
+   "res": "PBWorkViewWorkResponse"
+  }
+ },
+ "xt": {
+  "apd": "APDCommand",
+  "auc": "AUCCommand",
+  "ben": "BENCommand",
+  "bpp": "BPPCommand",
+  "cav": "CAVCommand",
+  "cmt": "CMTCommand",
+  "dga": "DGACommand",
+  "emc": "EMCCommand",
+  "emv": "EMVCommand",
+  "fdb": "FDBCommand",
+  "gal": "GALCommand",
+  "gch": "GCHCommand",
+  "gfl": "GFLCommand",
+  "gua": "GUACommand",
+  "hga": "HGACommand",
+  "ipl": "IPLCommand",
+  "irt": "IRTCommand",
+  "lcp": "LCPCommand",
+  "lfe": "LFECommand",
+  "lgn": "LGNCommand",
+  "llp": "LLPCommand",
+  "lre": "LRECommand",
+  "lsn": "LSNCommand",
+  "nfo": "NFOCommand",
+  "nof": "NOFCommand",
+  "oga": "OGACommand",
+  "oio": "OIOCommand",
+  "oud": "OUDCommand",
+  "png": "PNGCommand",
+  "pob": "POBCommand",
+  "ppc": "PPCCommand",
+  "qtu": "QTUCommand",
+  "sae": "SAECommand",
+  "sbs": "SBSCommand",
+  "sdo": "SDOCommand",
+  "sdu": "SDUCommand",
+  "sfl": "SFLCommand",
+  "sga": "SGACommand",
+  "sgc": "SGCCommand",
+  "sgs": "SGSCommand",
+  "sms": "SMSCommand",
+  "soe": "SOECommand",
+  "srt": "SRTCommand",
+  "ssm": "SSMCommand",
+  "ssu": "SSUCommand",
+  "stu": "STUCommand",
+  "uat": "UATCommand",
+  "und": "UNDCommand",
+  "vck": "VCKCommand",
+  "vef": "VEFCommand"
+ }
+}
